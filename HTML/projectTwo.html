@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>portfolio</title>
+	<link href="../style.css" rel="stylesheet" type="text/css" />
+	<script src="https://toolness.github.io/p5.js-widget/p5-widget.js">
+
+	</script>
+</head>
+
+<body>
+	<h1><img id="bannerimg" src="../Images/banner.jpg" alt="This is the banner"></h1>
+	<nav class="menu">
+
+		<div class="box">
+			<a href="../index.html">Home</a>
+		</div>
+		<div class="box">
+			<a href="aboutme.html">AboutMe</a>
+		</div>
+		<div class="box">
+			<a href="projects.html">Projects</a>
+		</div>
+		<div class="box">
+			<a href="DT.html">DeepThoughts</a>
+		</div>
+	</nav>
+
+
+
+
+
+ <h1>Project1: A simple face!</h1>
+    <div class="flexbox-container">
+       <div class="jsCode">
+            <script type="text/p5" data-height="850" data-preview-width="800">
+               
+var nums = [];
+var num = "";
+var lvl = 1;
+var score = 0;
+var page = 1;
+var val = 4;
+let input, button;
+let time = 2;
+
+
+
+
+function setup() {
+  canvas = createCanvas(550, 550);
+  nums.push(int(random(0, 9)));
+  nums.push(int(random(0, 9)));
+  nums.push(int(random(0, 9)));
+  nums.push(int(random(0, 9)));
+  canvas.mousePressed(changeP);
+}
+
+function draw() {
+  background(255);
+  if (page == 1) {
+    homeP();
+  }
+
+  if (page == 2) {
+    if (time != 0) {
+      gameE();
+      timer();
+    } else {
+      noLoop();
+      gameE();
+    }
+  }
+}
+
+function timer() {
+  print(time);
+  //timer
+  if (frameCount % 30 == 0 && time > 0) {
+    time--;
+  }
+  if (time == 0) {
+    console.log("done");
+  }
+
+ 
+}
+function homeP() {
+  textSize(40);
+  text("Press anywhere to begin", 60, 275);
+  text("Make sure to use commas", 50, 350);
+}
+function gameE() {
+  fill(0);
+  textSize(20);
+  text("Level: " + lvl, 15, 25);
+  textSize(20);
+  text("Score: " + score, 450, 25);
+  textSize(30);
+
+  
+  var i = 0;
+  num = nums; 
+  while (i < 4) {
+    textSize(40);
+    if (time == 0) {
+      fill(255);
+    }
+    text(nums[i], 202 + 40 * i, 200);
+    
+    i++;
+  }
+ 
+  input = createInput();
+  input.position(185, 275);
+  button = createButton("submit");
+  button.position(235, 295);
+  button.mousePressed(check);
+
+  
+}
+
+function check() {
+  const ans = input.value();
+  if (ans == num) {
+    console.log("correct " + score);
+    score++; 
+    lvl++; 
+  }
+  else{
+    console.log("Wrong!"); 
+  }
+  
+}
+
+function changeP() {
+  page++;
+  if (page >= 2) {
+    page = 2;
+  }
+}
+
+</script>
+
+            <!--</div>
+            <div class="flexbox-item item-2">
+            </div>-->
+
+
+<ul style= "list-style: none">
+  <li> 
+            <a style = "text-decoration:none" href="../projectTwo.html">></a>
+  </li>
+</ul> 
+
+        
+  
+
+</body>
+
+</html>

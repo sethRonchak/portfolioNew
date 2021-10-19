@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>portfolio</title>
+	<link href="../style.css" rel="stylesheet" type="text/css" />
+	<script src="https://toolness.github.io/p5.js-widget/p5-widget.js">
+
+	</script>
+</head>
+
+<body>
+	<h1><img id="bannerimg" src="../Images/banner.jpg" alt="This is the banner"></h1>
+	<nav class="menu">
+
+		<div class="box">
+			<a href="../index.html">Home</a>
+		</div>
+		<div class="box">
+			<a href="aboutme.html">AboutMe</a>
+		</div>
+		<div class="box">
+			<a href="projects.html">Projects</a>
+		</div>
+		<div class="box">
+			<a href="DT.html">DeepThoughts</a>
+		</div>
+	</nav>
+
+
+
+
+
+ <h1>Project1: A simple face!</h1>
+    <div class="flexbox-container">
+       <div class="jsCode">
+            <script type="text/p5" data-height="800" data-preview-width="800">
+               let cold = ["🏒", "⛄", "🐧", "❄"];
+var index = 0;
+
+      
+
+function setup() {
+  createCanvas(800, 800);
+  angleMode(DEGREES); 
+  strokeWeight(3);
+  stroke(0, 0, 0); 
+}
+
+function draw() {
+  textSize(20);
+  //fill(255);
+  //text(mouseX+"  "+mouseY, 30, 40); 
+  
+ for (var x = 100; x < 800; x += 200)
+    {
+      for (var y = 100; y < 800; y += 200) 
+        {
+        if (x == y)
+          {
+            textSize(80);
+            text(cold[index], x-42, y - 20, 135, 135);
+          }
+        else 
+          {
+            face(x, y);
+          }       
+        }
+    }
+  
+    
+
+}
+
+function face(x, y) {
+  
+  
+  //Face and Eyes
+  fill(255,255,255); 
+  ellipse(x, y, 135, 135); //200, 200
+  ellipse(x - 25, y - 22.5, 25, 25); //150, 165 
+  ellipse(x + 25, y - 22.5, 25, 25); //200, 165 
+  
+  //Smile 
+  arc(x , y , 50, 100, 1, 4500); //200, 225
+  
+  //Googly Eyes
+  fill(0, 0, 0);
+  ellipse(x - 27, y - 17.5, 12.5, 12.5); //146, 165
+  ellipse(x + 31, y - 22.5, 12.5, 12.5) //262, 155
+  
+  
+  
+}
+
+function mouseClicked() { 
+  
+  background(random(0, 255), random(0, 255), random(0, 255)); 
+  
+  if (index != 3)
+  {
+  index++;
+  }
+  else 
+  {
+    index = 0;
+  }
+}  
+
+</script>
+
+<h3> More projects soon to come!!</h3> 
+           
+
+
+
+
+        
+  
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+  body {
+      background-color: #59A8D9; 
+		}
+
+
+/*menu*/
+#bannerimg {
+    display: flex;
+    width: 99.4%;
+    height: 10%;
+    border: 5px solid #0D0D0D;
+    padding: 0px;
+    margin: 2px;
+}
+.menu {
+    display: flex;
+    border: 8px solid #1252A6;
+    padding: 2px;
+    justify-content: space-around;
+    font-family: 'Volkhov', serif;
+    background: #1252A6; 
+   
+}
+.menu a {
+    color: #0B508C;
+    text-decoration: none;
+    font-size: 22px;
+     
+    
+}
+.box {
+    flex-grow: 1;
+    background: #0D0D0D;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #1252A6;
+}
+
+/* Flex Box */ 
+
+/*page layout with flexbox*/
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    /*border: 3px solid #262626;*/
+    margin: 10px;
+
+
+    /*main (left right) axis*/
+    /*justify-content: stretch;*/
+    justify-content: flex-start;
+    /*justify-content: flex-end;*/
+    /*justify-content: center;*/
+    /*justify-content: stretch;*/
+    /*justify-content: space-between;*/
+    /*justify-content: space-evenly;
+    /*justify-content: space-end;*/
+
+
+
+    /*cross (up down) axis*/
+    /*align-items: space-evenly;
+    /*align-items:stretch;*/
+    /*align-items:space-between;*/
+    /*align-items:space-around;*/
+    /*align-items:end;*/
+    /*align-items:space-evenly;*/
+    ;
+}
+
+.flexbox-item {
+    margin: 5px;
+    padding: 3px;
+    border: 3px solid #0D0D0D;
+    background-color: #0F6DBF;
+}
+
+.item-1 {
+    /*flex-grow: 1;*/
+    width: 33%;
+    min-height: 50px;
+    font-family: 'Volkhov', sans-serif;
+    font-size: 28px;
+    background-color:#0F6DBF;
+}
+
+.item-2 {
+    /*flex-grow: 2;*/
+    width: 45%;
+    min-height: 200;
+    align-self: center;
+    background-color:#59A8D9;
+    margin: 100px; 
+    border: #59A8D9;
+}
+
+.item-3 {
+    /*flex-grow: 3;*/
+    width: 33%;
+    min-height: 300px;
+    background-color: #0F6DBF;
+    font-size: 28px;
+}
+
+.item-4 { 
+    width: 200px;
+    min-height: 50px;
+    font-family: 'Volkhov', sans-serif;
+    font-size: 15px;
+    background-color:#0F6DBF;
+}
+/* Stuff */ 
+
+#image{
+    border: 5px solid #0D0D0D;
+    margin: 5px;
+}
+
+.jsCode{
+  width: 100vw; 
+  height: 900px;
+  border: 5px solid #0D0D0D; 
+  padding: 0 px; 
+  margin: 15px; 
+}
+
